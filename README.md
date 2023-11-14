@@ -1,8 +1,8 @@
 # automate-loadbalancer-configuration
 
-In our last project we deployed two backend servers with a load balancer and distributed traffic across the webservers via the terminal. In this project we will be automating our previous project https://github.com/BusisiwePieterson/Nginx-Loadbalancer using Shell scripting.
+In our last project, we deployed two backend servers with a load balancer and distributed traffic across the web servers via the terminal. In this project, we will be automating our previous project https://github.com/BusisiwePieterson/Nginx-Loadbalancer using Shell scripting.
 
-With shell scripting, we can write scripts to automate tasks such as installing software packages, configuring systems, setting up network connections, and managing files and directories. This reduces the manual effort required to perform these tasks, which in turn saves time, improves efficiency ad reduces errors.
+With shell scripting, we can write scripts to automate tasks such as installing software packages, configuring systems, setting up network connections, and managing files and directories. This reduces the manual effort required to perform these tasks, which in turn saves time, improves efficiency, and reduces errors.
 
 
 ## Deploying and Configuring the Webservers
@@ -16,7 +16,7 @@ With shell scripting, we can write scripts to automate tasks such as installing 
 
 ![image](images/Screenshot_2.png)
 
-3. Run `sudo vi install.sh` to open a file and paste the belwo script:
+3. Run `sudo vi install.sh` to open a file and paste the below script:
 
 ```
 #!/bin/bash
@@ -68,14 +68,14 @@ sudo systemctl restart apache2
 
 ![image](images/Screenshot_3.png)
 
-5. Run `sudo chmod +x install.sh` to chnage permissions on the file to make executable.
+5. Run `sudo chmod +x install.sh` to change permissions on the file to make it executable.
 
-6. Run `./install.sh PUBLIC_IP` *e.g* `./install.sh  34.29.230.59` do this for each webserver.
+6. Run `./install.sh PUBLIC_IP` *e.g* `./install.sh  34.29.230.59` do this for each web server.
 
 ![image](images/Screenshot_4.png)
 
 
-7.  Copy and paste each webservers Public IP on your web browser.
+7.  Copy and paste each web server's Public IP on your web browser.
 
 ![image](images/Screenshot_5.png)
 
@@ -85,7 +85,7 @@ sudo systemctl restart apache2
 
 ## Deployment of Nginx as a Load Balancer using Shell Scripting
 
-1. We wil first provision an EC2 instance on Ubuntu and open port 80 to anywhere and SSH to it via the terminal.
+1. We will first provision an EC2 instance on Ubuntu open port 80 to anywhere and SSH to it via the terminal.
 
 ![image](images/Screenshot_7.png)
 
@@ -168,9 +168,11 @@ sudo systemctl restart nginx
 
 
 **Webserver 1**
+
 ![image](images/Screenshot_5.png)
 
 **Webserver 2**
+
 ![image](images/Screenshot_6.png)
 
 
